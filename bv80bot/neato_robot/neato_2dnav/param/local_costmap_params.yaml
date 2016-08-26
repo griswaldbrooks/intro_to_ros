@@ -23,4 +23,8 @@ local_costmap:
     cost_scaling_factor: 9.0
 
 
-
+plugins:
+  - {name: obstacle_layer,     type: "costmap_2d::VoxelLayer"}
+  - {name: range_sensor_layer, type: "range_sensor_layer::RangeSensorLayer"}
+  - {name: inflation_layer,    type: "costmap_2d::InflationLayer"}
+  - {name: footprint_layer,    type: "costmap_2d::FootprintLayer"}
