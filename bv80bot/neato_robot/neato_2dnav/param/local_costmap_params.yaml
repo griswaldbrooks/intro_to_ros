@@ -23,8 +23,13 @@ local_costmap:
     cost_scaling_factor: 9.0
 
 
-plugins:
-  - {name: obstacle_layer,     type: "costmap_2d::VoxelLayer"}
-  - {name: range_sensor_layer, type: "range_sensor_layer::RangeSensorLayer"}
-  - {name: inflation_layer,    type: "costmap_2d::InflationLayer"}
-  - {name: footprint_layer,    type: "costmap_2d::FootprintLayer"}
+  plugins:
+    - {name: range_sensor_layer, type: "range_sensor_layer::RangeSensorLayer"}
+    - {name: obstacle_layer,     type: "costmap_2d::VoxelLayer"}
+    - {name: inflation_layer,    type: "costmap_2d::InflationLayer"}
+
+  range_sensor_layer:
+    clear_threshold:    0.46
+    mark_threshold:     0.8
+    no_readings_timeout: 2.0
+    topics: ["/ultrasound1", "/ultrasound2"]
