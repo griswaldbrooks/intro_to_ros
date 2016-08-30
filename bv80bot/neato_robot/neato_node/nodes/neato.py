@@ -109,7 +109,6 @@ class NeatoNode:
 		    #self.robot.setMotors(self.cmd_vel[0], self.cmd_vel[1], (abs(self.cmd_vel[0])+abs(self.cmd_vel[1]))/2)
 		    self.robot.setMotors(self.cmd_vel[0], self.cmd_vel[1], max(abs(self.cmd_vel[0]),abs(self.cmd_vel[1])))
 		    cmd_rate = self.CMD_RATE
-
             self.old_vel = self.cmd_vel
 
             # prepare laser scan

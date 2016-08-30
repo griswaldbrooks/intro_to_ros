@@ -251,7 +251,11 @@ class Botvac():
         else:
             self.stop_state = False
 
-        self.sendCmd("setmotor "+str(int(l))+" "+str(int(r))+" "+str(int(s)))
+        self.sendCmd("setmotor" +
+                     " lwheeldist " + str(int(l)) +
+                     " rwheeldist " + str(int(r)) +
+                     " speed " + str(int(s)))
+#        self.sendCmd("setmotor "+str(int(l))+" "+str(int(r))+" "+str(int(s)))
 
     def getMotors(self):
         """ Update values for motors in the self.state dictionary.

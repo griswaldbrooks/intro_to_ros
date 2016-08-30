@@ -7,7 +7,7 @@
         keyboard
         logitech
   -->
-  <arg name="teleop_controler"   default="xbox360" />
+  <arg name="teleop_controler"   default="keyboard" />
 
 
   <arg name="input_cmd_vel_topic"    default="/raw_cmd_vel" />
@@ -50,7 +50,7 @@
     <remap from="/base_scan" to="/scan" />
   </node>
  
-  <!-- publish teh URDF -->
+  <!-- publish the URDF -->
   <param name="robot_description" command="$(find xacro)/xacro.py $(find neato_node)/urdf/neato.urdf.xacro" />
   
   <!-- publish the robot state transforms -->
