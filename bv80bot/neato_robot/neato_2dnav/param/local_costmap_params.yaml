@@ -5,8 +5,8 @@ local_costmap:
   update_frequency: 2.0
   publish_frequency: 2.0
  
-  width: 3.0
-  height: 3.0
+  width: 4.0
+  height: 4.0
 
   rolling_window: true
 
@@ -29,7 +29,8 @@ local_costmap:
     - {name: inflation_layer,    type: "costmap_2d::InflationLayer"}
 
   range_sensor_layer:
-    clear_threshold:    0.46
-    mark_threshold:     0.8
+    clear_threshold:    0.75
+    mark_threshold:     0.95
     no_readings_timeout: 2.0
+    clear_on_max_reading: true
     topics: ["/ultrasound1", "/ultrasound2"]
